@@ -1,4 +1,5 @@
-*This outline property puts an outline on all the divs */
+/*This outline property puts an outline on all the divs. */
+
 div {
 	outline: 2px solid #CCCCCC;
 }
@@ -9,8 +10,6 @@ div {
 	height: 600px;
 }
 
-
-
 .button-holder {
 	width: 180px;
 	float: left;
@@ -19,7 +18,7 @@ div {
 .button {
 	color: purple;
 	width: 75px;
-	padding: 6px;
+	padding: 8px;
 	margin: 6px;
 	border-width: 1px;
 	border-color: gray;
@@ -46,8 +45,8 @@ div {
 }
 
 .image-holder {
-	width: 600px;
-	height: 345px;
+	width: 700px;
+	height: 550px;
 	float: left;
 	position: absolute;
 }
