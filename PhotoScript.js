@@ -4,7 +4,7 @@
 
 
 /*This is an array of the photos.*/
-var images = ["Chrysanthemum.jpg", "Desert.jpg", "Hydrangeas.jpg", "Jellyfish.jpg", "Koala.jpg",
+var Photos = ["Chrysanthemum.jpg", "Desert.jpg", "Hydrangeas.jpg", "Jellyfish.jpg", "Koala.jpg",
  "Lighthouse.jpg", "Penguins.jpg", "Tulips.jpg"];
  
 
@@ -19,11 +19,11 @@ function setNav() {
 /*This is where somthing happens when ".button" elements are clicked.*/		
 		console.log("click");
 
-/*Next, I'll add if/else statments to tell the computer to go tot eh next photo
- * for var ".hasClass" then "next".
+/*Next, I'll add if/else statments to tell the computer to go to the next 
+ * and previous photos in my "Photos" folder.
  */		
 		var isNext = $(this).hasClass("next");
-		if (isNext == true && index != (images.length-1)) {
+		if (isNext == true && index != (Photos.length-1)) {
 			index = index + 1;
 		} else if (index = 0 ) {
 			index = index - 1;
@@ -32,7 +32,7 @@ function setNav() {
 		
 	if (index == 0) {
 		$(".button.prev").addClass("disabled");
-	} else if (index== (images.length-1)) {	
+	} else if (index== (Photos.length-1)) {	
 		$(".button.next").addClass("disabled");
 	} else {
 		$(".button").removeClass("disabled");
@@ -45,8 +45,8 @@ function setNav() {
 }
 
 /* This function will change the photos.*/
-function updateImage() {
-	console.log(images[index]);
+function updatePhotos() {
+	console.log(Photos[index]);
 	$(".image-holder").html(
 		"<img src='images/"+images[index]+"'/>"
 	);
@@ -64,6 +64,6 @@ $(document).ready(function() {
 	setNav();
 });
 
-console.log(images)
+console.log("images")
 
 
