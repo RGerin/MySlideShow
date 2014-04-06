@@ -21,17 +21,17 @@ function setNav() {
 	var buttonName = $(this).attr("ref");	
 	
 /*Next, I'll add if/else statments to tell the computer to go to the next 
- * and previous photos in my "Photos" folder. I originally has "images.length" but
- * realized his was incorrect and changed it to "Photos.length" because that is the 
- * name of the folder where the photos are located."
- */		
+ * photo in my "Photos" folder. I originally has "images.length" but
+ * realized his was incorrect and changed it to "Photos.length" because 
+ * that is the name of the folder where the photos are located.*/	
+ 	
 		var isNext = ($(this).hasClass("next"));
 		if (isNext == true && index != (Photos.length-1)) {
 			index = index + 1;
 		} else if (index = 0 ) {
 			index = index - 1;
 		}
-		
+				
 /*I changed "images.length" here to "Photos.length" because that is the name of the
  * folder where the photos are located.*/		
 	if (index == 0) {
@@ -41,7 +41,11 @@ function setNav() {
 	} else {
 		$(".button").removeClass("disabled");
 	}	
-/*I erroneously had "updateimages" here but changed it to "updatePhotos".*/		
+/*I erroneously had "updateimages" here but changed it to "updatePhotos".
+ 
+ * One thing I don't understand: No matter which photo you are on in the slide,
+ * if you hit the PREV button, it always takes you back to the very first photo 
+ * of the orange chrysanthemum and not to the photo immediate before it. Why?*/		
 	updatePhotos();		
 	});
 	
