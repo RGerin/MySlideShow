@@ -18,7 +18,6 @@ function setNav() {
 	$(".button").on("click", function() {
 /*This is where something happens when ".button" elements are clicked.*/		
 	
-	var buttonName = $(this).attr("ref");	
 	
 /*Next, I'll add if/else statments to tell the computer to go to the next 
  * photo in my "Photos" folder. I originally has "images.length" but
@@ -26,9 +25,11 @@ function setNav() {
  * that is the name of the folder where the photos are located.*/	
  	
 		var isNext = ($(this).hasClass("next"));
+		
+		
 		if (isNext == true && index != (Photos.length-1)) {
 			index = index + 1;
-		} else if (index = 0 ) {
+		} else if (isNext == false && index > 0 ) {
 			index = index - 1;
 		}
 				
@@ -55,14 +56,14 @@ function setNav() {
  instead of updatePhotos here.*/
 function updatePhotos() {
 	$(".image-holder").html(
-		"<img src='Photos/"+Photos[index]+"'/>"
+		"<img src='Photos/"+Photos[index]+"' class='image-size'/>"
 	);
 }
 
 /* This get command will load the first photo from the Photos folder into the image holder.*/
 $(document).ready(function() {
 	$(".image-holder").html(
-		"<img src='Photos/"+Photos[index]+"'/>"
+		"<img src='Photos/"+Photos[index]+"' class='image-size'/>"
 	);	
 	
 	
