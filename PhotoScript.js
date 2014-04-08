@@ -42,11 +42,7 @@ function setNav() {
 	} else {
 		$(".button").removeClass("disabled");
 	}	
-/*I erroneously had "updateimages" here but changed it to "updatePhotos".
- 
- * One thing I don't understand: No matter which photo you are on in the slide,
- * if you hit the PREV button, it always takes you back to the very first photo 
- * of the orange chrysanthemum and not to the photo immediate before it. Why?*/		
+/*I erroneously had "updateimages" here but changed it to "updatePhotos".*/		
 	updatePhotos();		
 	});
 	
@@ -56,22 +52,21 @@ function setNav() {
  instead of updatePhotos here.*/
 function updatePhotos() {
 	$(".image-holder").html(
-		"<img src='Photos/"+Photos[index]+"' class='image-size'/>"
+		"<img src='Photos/"+Photos[index]+"'class='image-size'/>"
 	);
 }
 
 /* This get command will load the first photo from the Photos folder into the image holder.*/
 $(document).ready(function() {
 	$(".image-holder").html(
-		"<img src='Photos/"+Photos[index]+"' class='image-size'/>"
+		"<img src='Photos/"+Photos[index]+"'class='image-size'/>"
 	);	
-	
 	
 	$(".button.prev").addClass("disabled");
 	
 	setNav();
 });
 
-console.log("Photos")
+
 
 
