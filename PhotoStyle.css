@@ -45,10 +45,15 @@ div {
 }
 /* I revived the position: absolute property, so my photos would 
  * not cover up the buttons and would float to the left of them.*/
-.main-content {
-.image-holder {
+.main-content {}
+
+.image-size {
 	width: 100%;
-	height: 550px;
+	height: auto;
+	
+}
+.image-holder {
+	width: 550px;
 	float: left;
 	
 }
